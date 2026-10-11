@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إلى زوزو ❤️</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #ffdeeb;
+      background-image: radial-gradient(#ffb6c1 1px, transparent 0);
+      background-size: 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background: #ffeef4;
+      border: 3px solid #ff9ebb;
+      border-radius: 25px;
+      padding: 25px;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(255, 105, 180, 0.2);
+      position: relative;
+    }
+    .kitty-img {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      margin: 10px auto;
+      display: block;
+    }
+    .step {
+      display: none;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    .step.active {
+      display: block;
+    }
+    .btn {
+      background: #ff5c8d;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+      box-shadow: 0 4px 10px rgba(255, 92, 141, 0.3);
+      transition: all 0.2s;
+    }
+    .btn:hover {
+      background: #e04374;
+      transform: scale(1.05);
+    }
+    .poem-box {
+      background: #fff;
+      border-radius: 15px;
+      padding: 15px;
+      color: #d63384;
+      line-height: 1.8;
+      font-size: 15px;
+      border: 1px dashed #ff9ebb;
+      margin-top: 10px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .floating-hearts {
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="floating-hearts">💖💕</div>
+
+    <!-- الخطوة 1 -->
+    <div class="step active" id="step1">
+      <img class="kitty-img" src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_kitty_character_image.png" alt="Hello Kitty">
+      <button class="btn" onclick="nextStep(2)">أنتِ زوزو؟ ✨</button>
+    </div>
+
+    <!-- الخطوة 2 -->
+    <div class="step" id="step2">
+      <img class="kitty-img" src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_kitty_character_image.png" alt="Hello Kitty">
+      <p style="color: #d63384; font-size: 18px; font-weight: bold; margin-bottom: 10px;">هلو زوزو 💕</p>
+      <button class="btn" onclick="nextStep(3)">زوزو عندي سؤال الججج 🤔</button>
+    </div>
+
+    <!-- الخطوة 3 -->
+    <div class="step" id="step3">
+      <img class="kitty-img" src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_kitty_character_image.png" alt="Hello Kitty">
+      <p style="color: #d63384; font-size: 16px; font-weight: bold;">بس مستحية اسألج إياه 🙈</p>
+      <button class="btn" onclick="nextStep(4)">اسألني 🥺</button>
+    </div>
+
+    <!-- الخطوة 4 -->
+    <div class="step" id="step4">
+      <img class="kitty-img" src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_kitty_character_image.png" alt="Hello Kitty">
+      <p style="color: #d63384; font-size: 18px; font-weight: bold;">تحبين مصطفى لو لا؟ 😳</p>
+      <button class="btn" onclick="nextStep(5)">ها؟ 😳</button>
+    </div>
+
+    <!-- الخطوة 5 -->
+    <div class="step" id="step5">
+      <img class="kitty-img" src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_kitty_character_image.png" alt="Hello Kitty">
+      <p style="color: #d63384; font-size: 17px; font-weight: bold;">شنو ها 😳 تحبين مصطفى لو لا؟</p>
+      <button class="btn" onclick="nextStep(6)">مدري 🙈</button>
+    </div>
+
+    <!-- الخطوة 6 -->
+    <div class="step" id="step6">
+      <img class="kitty-img" src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_kitty_character_image.png" alt="Hello Kitty">
+      <p style="color: #d63384; font-size: 16px; margin-bottom: 10px;">إذا تحبين مصطفى دوسي على القلب 💖</p>
+      <button class="btn" style="font-size: 28px; padding: 10px 30px;" onclick="nextStep(7)">❤️</button>
+    </div>
+
+    <!-- الخطوة 7 (الرسالة والقصيدة) -->
+    <div class="step" id="step7">
+      <div class="poem-box">
+        <p><b>في حُبّكِ ماذا أقول؟</b></p>
+        <p>القَلْمُ حائِرٌ بَينَ السُّطور</p>
+        <p>ارسم ورداً فلديكِ أطيب العطور</p>
+        <p>لو قُلتُ أُحِبُّكِ فَلَنْ يكفيني</p>
+        <p>فأنَا مريضٌ بِحُبِّكِ فَمَنْ يداويني؟</p>
+        <p>وَقَلْبي يَهواكِ ويُناديكِ</p>
+        <p>ولَو كَانَ لِي ألفُ قَلْبٍ لأحْبَبْتُكِ بها جميعاً ❤️</p>
+      </div>
+      <button class="btn" onclick="nextStep(8)">اعشقج واحبج 🥺💖</button>
+    </div>
+
+    <!-- الخطوة 8 (شغّلي أسبوتيفاي/الأغنية) -->
+    <div class="step" id="step8">
+      <p style="color: #d63384; font-size: 18px; font-weight: bold; margin-bottom: 15px;">أغنيتنا المفضلة 🎵</p>
+      <img class="kitty-img" src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_kitty_character_image.png" alt="Hello Kitty">
+      <br>
+      <button class="btn" onclick="nextStep(1)">العودة للبداية ❤️</button>
+    </div>
+
+  </div>
+
+  <script>
+    function nextStep(stepNumber) {
+      document.querySelectorAll('.step').forEach(step => {
+        step.classList.remove('active');
+      });
+      document.getElementById('step' + stepNumber).classList.add('active');
+    }
+  </script>
+</body>
+</html>
